@@ -37,13 +37,59 @@ Widget builRowWidget({
                 ),
               ),
             ),
+            Text(title, style:  TextStyle(fontSize: 15.0.sp, color: containerColor , fontWeight: FontWeight.bold),),
             Padding(
-              padding: const EdgeInsets.only(right: 12.0),
+              padding: EdgeInsets.only(right: 12.0.w,left: 110.w),
               child: Icon(Icons.chevron_right_outlined, color: Colors.white,size: 35.0,),
             ),
           ],),
       ),
     ),
   ],
+  );
+}
+
+
+
+
+Widget buildSignin_SignupButton({String label, @required Function onTab }){
+  return SizedBox(
+    width: double.infinity,
+    child:   TextButton(
+      onPressed: onTab,
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.deepPurpleAccent),
+        foregroundColor: MaterialStateProperty.all(Colors.white),
+        padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical:14.0.h )),
+
+      ),
+      child: Text(label,
+        style: TextStyle(
+            fontSize: 16.sp
+        ),
+      ),
+    ),
+  );
+}
+
+
+Widget buildTransparentButtonWidget({String label, @required Function onTab}) {
+
+  return SizedBox(
+    width: double.infinity,
+    child: TextButton(
+      onPressed: onTab,
+      style: ButtonStyle(
+        side:MaterialStateProperty.all(BorderSide(color:Colors.deepPurpleAccent)),
+        foregroundColor: MaterialStateProperty.all(Colors.deepPurpleAccent),
+        padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical:14.0.h )),
+
+      ),
+      child: Text(label,
+        style: TextStyle(
+            fontSize: 16.sp
+        ),
+      ),
+    ),
   );
 }
