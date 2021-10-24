@@ -27,6 +27,8 @@ class _AuthScreenState extends State<AuthScreen> {
                   padding: EdgeInsets.only(top: 90.0),
                   child: Text("prodaycare", style: TextStyle(fontWeight: FontWeight.bold, fontSize:35.sp),),
                 ),
+                SizedBox(height: 30.0.h,),
+
                 Image(image: AssetImage("images/me.jpg"),
                   fit: BoxFit.cover,
                 ),
