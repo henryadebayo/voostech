@@ -25,37 +25,53 @@ class _AuthScreenState extends State<AuthScreen> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(top: 90.0),
-                  child: Text("prodaycare", style: TextStyle(fontWeight: FontWeight.bold, fontSize:35.sp),),
+                  child: Text(
+                    "prodaycare",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 35.sp),
+                  ),
                 ),
-                SizedBox(height: 30.0.h,),
-
-                Image(image: AssetImage("images/me.jpg"),
+                SizedBox(
+                  height: 30.0.h,
+                ),
+                Image(
+                  image: AssetImage("images/me.jpg"),
                   fit: BoxFit.cover,
                 ),
               ],
             ),
             Column(
               children: [
-                Text("All in one solution for early childhood education.", textAlign: TextAlign.center , style: TextStyle( fontSize:20.sp),),
-                SizedBox(height: 35.0.h,),
-                buildSignin_SignupButton(onTab: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Screen2()),
-                  );
-                },
-                    label: "Sign up"
+                Text(
+                  "All in one solution for early childhood education.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 20.sp),
                 ),
-                SizedBox(height: 15.0.h,),
-                buildTransparentButtonWidget(onTab: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Screen2()),
-                  );
-                },
-                    label: "Log in"
+                SizedBox(
+                  height: 35.0.h,
                 ),
-                SizedBox(height: 40.0.h,),
+                buildSignin_SignupButton(
+                    onTab: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Screen2()),
+                      );
+                    },
+                    label: "Sign up"),
+                SizedBox(
+                  height: 15.0.h,
+                ),
+                buildTransparentButtonWidget(
+                    onTab: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Screen2()),
+                      );
+                    },
+                    label: "Log in"),
+                SizedBox(
+                  height: 41.0.h,
+                ),
               ],
             ),
           ],
