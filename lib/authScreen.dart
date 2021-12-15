@@ -70,7 +70,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     },
                     label: "Log in"),
                 SizedBox(
-                  height: 41.0.h,
+                  height: 40.0.h,
                 ),
               ],
             ),
